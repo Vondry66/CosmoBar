@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./Components/Header";
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Bottles from "./Components/Bottles";
+
+import Wines from "./Components/Wines";
+import Soft from "./Components/Soft";
+import Beer from "./Components/Beer";
+import Cocktails from "./Components/Cocktails";
+import Gin from "./Components/Gin";
+import Spirits from "./Components/Spirits";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/bottles" element={<Bottles />} />
+          <Route path="/wines" element={<Wines />} />
+          <Route path="/soft" element={<Soft />} />
+          <Route path="/beer" element={<Beer />} />
+          <Route path="/cocktails" element={<Cocktails />} />
+          <Route path="/gin" element={<Gin />} />
+          <Route path="/spirits" element={<Spirits />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
