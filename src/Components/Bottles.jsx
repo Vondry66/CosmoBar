@@ -3,19 +3,19 @@ import { useState,useEffect } from 'react';
 
 
 import {db} from '../firebase-config';
-import {collection, getDocs,updateDoc,doc} from "firebase/firestore";
+import {collection, getDocs,updateDoc,doc, onSnapshot} from "firebase/firestore";
 
 const Bottles = ()=>{
     
   const [items,setItems] =  useState([]);
-  const itemsCollectionRef = collection(db, 'Bottled beers cider')
+  const itemsCollectionRef = collection(db, 'Bottled beers ciders')
   const decrementCount = async (id,count)=>{
-       const itemDoc =doc(db,"Bottled beers cider",id)
+       const itemDoc =doc(db,"Bottled beers ciders",id)
       const newFields = {count: count - 1}
       await updateDoc(itemDoc,newFields)
   } 
   const incrementCount = async (id,count)=>{
-      const itemDoc= doc(db,"Bottled beers cider",id)
+      const itemDoc= doc(db,"Bottled beers ciders",id)
       const newF ={count: count + 1}
       await updateDoc(itemDoc,newF)
   }
@@ -32,7 +32,7 @@ const Bottles = ()=>{
         <div className="items">
          
          {items.map((item) =>{return <div>
-          <h2>{item.name}</h2>
+          <h3>{item.name}</h3>
           <p>{item.count}</p>
           <div className='buttons'>
           <button className='button' onClick={()=>{decrementCount(item.id, item.count)}}>-</button>

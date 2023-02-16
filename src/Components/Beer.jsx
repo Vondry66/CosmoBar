@@ -30,7 +30,7 @@ const Beer = ()=>{
           <div className="items">
            
            {items.map((item) =>{return <div>
-            <h2>{item.name}</h2>
+            <h3>{item.name}</h3>
             <p>{item.count}</p>
             <div className='buttons'>
             <button className='button' onClick={()=>{decrementCount(item.id, item.count)}}>-</button>

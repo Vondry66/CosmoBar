@@ -5,8 +5,36 @@
 }
 .App {
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: rgb(230, 212, 136);
   background-color: rgb(65, 54, 54);
+  font-weight: 200;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.logo{
+  height: auto;
+  width: fit-content;
+  float: left;
+}
+.button {
+  color: black;
+  background-color: rgb(226, 177, 43);
+  box-shadow: 3px 3px;
+  border-radius: 25px;
+}
+.buttons {
+  margin-top: 4px;
+  padding: 4px;
+  
+  
 }
 
-
+.navMenu{
+  padding: 10px;
+  font-size: large;
+  color: burlywood;
+  box-shadow: 5px 5px 5px   rgb(197, 219, 72);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.p{
+  
+}

@@ -22,7 +22,7 @@ function NavBar() {
                             src={logo}
                             width="auto"
                             height="100%"
-                            className="d-inline-block align-top"
+                            className="logo"
                             />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
