@@ -3,7 +3,7 @@ import { useState,useEffect } from 'react';
 
 
 import {db} from '../firebase-config';
-import {collection, getDocs,updateDoc,doc, onSnapshot} from "firebase/firestore";
+import {collection, getDocs,updateDoc,doc} from "firebase/firestore";
 
 const Bottles = ()=>{
     
@@ -26,7 +26,7 @@ const Bottles = ()=>{
           setItems(data.docs.map((doc)=>({...doc.data(),id: doc.id})))
       }
       getItems()
-  },[])
+  })
   
       return (
         <div className="items">
