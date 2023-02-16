@@ -26,7 +26,7 @@ const Bottles = ()=>{
           setItems(data.docs.map((doc)=>({...doc.data(),id: doc.id})))
       }
       getItems()
-  })
+  },[])
   
       return (
         <div className="items">
